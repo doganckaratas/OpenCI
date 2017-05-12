@@ -10,6 +10,6 @@ package OpenCIL.Neural;
 public class NeuralNetwork { 
 	
 	public NeuralNetwork() {
-		;
+		;//
 	}
 }
