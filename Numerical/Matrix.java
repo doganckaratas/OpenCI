@@ -61,5 +61,5 @@ public class Matrix {
         return data1d[row][col];
     }
 
-    // zeros, ones, clone, transpose, inverse, getrow, getcol, ...
+    // zeros, ones, clone, transpose, inverse, getrow, getcol, dotproduct, crossproduct  ...
 }
