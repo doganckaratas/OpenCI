@@ -34,7 +34,7 @@ public class Matrix {
      * ...
      */
 
-    public static enum type{
+    public enum Type{
         /*
         B1, B2, B3, B4,     // 8 bit (byte)
         S1, S2, S3, S4,     // 16 bit (short)
@@ -46,8 +46,8 @@ public class Matrix {
 
     //public Matrix();
 
-    public Matrix(int rows, int cols,type t) {
-        if(t == type.D1){
+    public Matrix(int rows, int cols,Type t) {
+        if(t == Type.D1){
             this.m1 = rows;
             this.n1 = cols;
             this.data1d = new double[m1][n1];
