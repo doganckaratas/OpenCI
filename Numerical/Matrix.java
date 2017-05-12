@@ -60,4 +60,6 @@ public class Matrix {
     public double getData(int row,int col) {
         return data1d[row][col];
     }
+
+    // zeros, ones, clone, transpose, inverse, getrow, getcol, ...
 }
