@@ -5,7 +5,7 @@
  * @version 1.0
  */
 
-package Neural;
+package OpenCIL.Neural;
  
 public class NeuralNetwork { 
 	
