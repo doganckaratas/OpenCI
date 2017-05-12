@@ -10,7 +10,7 @@
 //   [ m20, m21, m22] ] formatında olmalı, bu 1D matrix oluyor.
 // bundan 2 tane daha yaratıp hepsini aynı anda döndürürsen 3D matris olur
 
-package OpenCIL.Numerical;
+package OpenCISP.Numerical;
 
 public class Matrix {
     private int m1;
