@@ -5,7 +5,7 @@
  * @version 1.0
  */
 
-package Numerical;
+package OpenCIL.Numerical;
 
 public class Polar {
     private double radius;
