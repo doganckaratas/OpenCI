@@ -15,5 +15,5 @@ For making standalone library file
 
 After importing OpenCI classes to your own project/source code, 
 
-- compile your source with "javac -cp .;{path-to-jar}.jar {your-source-file}.java" 
-- run with "java -cp .;{path-to-jar}.jar {your public class}"
+- compile your source with "javac -cp .;{path-to-jar}/OpenCI.jar {your-source-file}.java" 
+- run with "java -cp .;{path-to-jar}/OpenCI.jar {your public class}"
