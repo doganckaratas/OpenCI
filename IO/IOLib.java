@@ -5,7 +5,7 @@
  * @version 1.0
  */
 
-package OpenCIL.IO;
+package OpenCISP.IO;
  
 public class IOLib { 
 	

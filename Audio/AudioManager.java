@@ -5,7 +5,7 @@
  * @version 1.0
  */
 
-package OpenCIL.Audio;
+package OpenCISP.Audio;
  
 public class AudioManager { 
 	
