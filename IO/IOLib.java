@@ -1,14 +1,15 @@
 /**
- * IO.java
+ * IOLib.java
  *
  * @author dogan can karatas
  * @version 1.0
  */
+
+package IO;
  
- 
-public class IO { 
+public class IOLib { 
 	
-	public IO() {
+	public IOLib() {
 		;
 	}
 }
