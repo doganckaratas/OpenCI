@@ -5,7 +5,7 @@
  * @version 1.0
  */
 
-package OpenCISP.Audio;
+package OpenCI.Audio;
  
 public class AudioManager { 
 	

@@ -5,7 +5,7 @@
  * @version 1.0
  */
  
-package OpenCISP.Vision;
+package OpenCI.Vision;
  
 public class ComputerVision { 
 	

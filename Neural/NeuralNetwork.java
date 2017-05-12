@@ -5,7 +5,7 @@
  * @version 1.0
  */
 
-package OpenCISP.Neural;
+package OpenCI.Neural;
  
 public class NeuralNetwork { 
 	
