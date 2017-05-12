@@ -12,6 +12,8 @@ Open Source Computer Intelligence Library
 For making standalone library file
 - create zip archive of OpenCI folder
 - rename it to jar
+
 After importing OpenCI classes to your own project/source code, 
+
 - compile your source with "javac -cp .;{path-to-jar}.jar {your-source-file}.java" 
 - run with "java -cp .;{path-to-jar}.jar {your public class}"
