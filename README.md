@@ -117,16 +117,16 @@ public class TestComplex {
 		
 		// ------------------------------------------------------------
 		
-		Complex[] dizi = new Complex[4]; // fourier tablosu olabilir
-		for(int i = 0; i < dizi.length; i++) {
-			//dizi[i] = new Complex(2*(i+1),-3*(i+1));
-			dizi[i] = new Complex();
-			dizi[i].setReal(2*(i+1));
-			dizi[i].setImag(3*(i+1));
+		Complex[] complexArray = new Complex[4]; // Could be Fourier Transform Array
+		for(int i = 0; i < complexArray.length; i++) {
+			//complexArray[i] = new Complex(2*(i+1),-3*(i+1));
+			complexArray[i] = new Complex();
+			complexArray[i].setReal(2*(i+1));
+			complexArray[i].setImag(3*(i+1));
 		}
 		
-		for(int i = 0; i < dizi.length; i++) {
-			System.out.println(dizi[i].toString());
+		for(int i = 0; i < complexArray.length; i++) {
+			System.out.println(complexArray[i].toString());
 		}
     }
 }
