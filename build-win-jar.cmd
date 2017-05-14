@@ -1,15 +1,5 @@
 @echo off
 REM note: this file must be placed in same level with OpenCI source folder
-REM directory tree should be;
-REM 
-REM .
-REM |_ /OpenCI
-REM | |_ /Audio
-REM | |_ /IO
-REM | |_ /Neural
-REM | |_ ...
-REM | 
-REM |_ build-win-jar.cmd
 
 mkdir output
 dir /s /B *.java > src.txt
