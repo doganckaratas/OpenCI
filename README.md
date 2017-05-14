@@ -11,13 +11,13 @@ Open Source Computer Intelligence Library
 - Create Utilities / Build-Tools folder and add build tools in it
 - ...
 
-## Making standalone jar file
+## Making standalone jar 
 Run ``` build-win-jar.cmd ``` for windows or ``` build-linux-jar.sh ``` for linux (after setting appropriate permissions).
 
 The ``` OpenCI.jar ``` file will be appeared in the same folder after this operation.
 
 
-## Using the newly created jar file
+## Using the jar 
 - For compiling, type ``` javac -cp .;{path-to-jar}.jar Test.java ``` in console
 - For running, type ``` java -cp .;{path-to-jar}.jar Test ``` in console
 
