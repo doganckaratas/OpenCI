@@ -1,6 +1,8 @@
 # OpenCI
 Open Source Computer Intelligence Library
 
+Version: 1.0
+
 ###### *Maintaining by Doğan Can Karataş, 2017*
 
 
