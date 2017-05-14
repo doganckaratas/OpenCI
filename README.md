@@ -14,16 +14,16 @@ Version: 0.1 Alpha
 - ...
 
 ## Making standalone jar 
-Run ``` build-win-jar.cmd ``` for windows or ``` build-linux-jar.sh ``` for linux (after setting appropriate permissions).
+Run `build-win-jar.cmd` for windows or `build-linux-jar.sh` for linux (after setting appropriate permissions).
 
-The ``` OpenCI.jar ``` file will be appeared in the same folder after this operation.
+The `OpenCI.jar` file will be appeared in the same folder after this operation.
 
 
 ## Using the jar 
-- For compiling, type ``` javac -cp .;{path-to-jar}.jar Test.java ``` in console
-- For running, type ``` java -cp .;{path-to-jar}.jar Test ``` in console
+- For compiling, type `javac -cp .;{path-to-jar}.jar Test.java` in console
+- For running, type `java -cp .;{path-to-jar}.jar Test` in console
 
-Here are the sample program, ``` TestComplex.java ``` ;
+Here are the sample program, `TestComplex.java` ;
 
 ``` java
 import OpenCI.Numerical.*;
@@ -94,7 +94,7 @@ Let's assume our directory tree like this;
 | ...
 ``` 
 
-then we just need to go into ``` OpenCI-Tests ``` folder and type these commands,
+then we just need to go into `OpenCI-Tests` folder and type these commands,
 
 ``` bat
 javac -cp .;../OpenCI.jar TestComplex.java
