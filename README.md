@@ -82,52 +82,53 @@ public class TestComplex {
     public static void main(String[] args) {
         Complex c1 = new Complex(3,4);
         Complex c2 = new Complex(3,3);
+	
         System.out.println("Compare " + c1.toString() + " == " + c2.toString());
-		System.out.println(c1.compareTo(c2));
+	System.out.println(c1.compareTo(c2));
 		
-		// ------------------------------------------------------------
+	// ------------------------------------------------------------
 		
-		Complex a = new Complex();
-		Complex b = new Complex(5,-12);
+	Complex a = new Complex();
+	Complex b = new Complex(5,-12);
 		
-		System.out.println("\nBefore Set");
-		System.out.println(a.toString());
-		System.out.println(b.toString());
+	System.out.println("\nBefore Set");
+	System.out.println(a.toString());
+	System.out.println(b.toString());
 		
-		a.set(b);
+	a.set(b);
 		
-		System.out.println("\nAfter Set");
-		System.out.println(a.toString());
-		System.out.println(b.toString() + "\n");
-		
-		// ------------------------------------------------------------
-		
-		a = new Complex();
-		b = new Complex(5,12);
-		
-		System.out.println("Before Get");
-		System.out.println(a.toString());
-		System.out.println(b.toString() + "\n");
-		
-		a = b.get();
-		
-		System.out.println("\nAfter Get");
-		System.out.println(a.toString());
-		System.out.println(b.toString() + "\n");
-		
-		// ------------------------------------------------------------
-		
-		Complex[] complexArray = new Complex[4]; // Could be Fourier Transform Array
-		for(int i = 0; i < complexArray.length; i++) {
-			//complexArray[i] = new Complex(2*(i+1),-3*(i+1));
-			complexArray[i] = new Complex();
-			complexArray[i].setReal(2*(i+1));
-			complexArray[i].setImag(3*(i+1));
-		}
-		
-		for(int i = 0; i < complexArray.length; i++) {
-			System.out.println(complexArray[i].toString());
-		}
+	System.out.println("\nAfter Set");
+	System.out.println(a.toString());
+	System.out.println(b.toString() + "\n");
+	
+	// ------------------------------------------------------------
+	
+	a = new Complex();
+	b = new Complex(5,12);
+	
+	System.out.println("Before Get");
+	System.out.println(a.toString());
+	System.out.println(b.toString() + "\n");
+	
+	a = b.get();
+	
+	System.out.println("\nAfter Get");
+	System.out.println(a.toString());
+	System.out.println(b.toString() + "\n");
+	
+	// ------------------------------------------------------------
+	
+	Complex[] complexArray = new Complex[4]; // Could be Fourier Transform Array
+	for(int i = 0; i < complexArray.length; i++) {
+		//complexArray[i] = new Complex(2*(i+1),-3*(i+1));
+		complexArray[i] = new Complex();
+		complexArray[i].setReal(2*(i+1));
+		complexArray[i].setImag(3*(i+1));
+	}
+	
+	for(int i = 0; i < complexArray.length; i++) {
+		System.out.println(complexArray[i].toString());
+	}
     }
 }
 ``` 
