@@ -88,12 +88,13 @@ Let's assume our directory tree like this;
 |_ OpenCI-Tests/
 |  |_ TestComplex.java
 | ...
-
 ``` 
 
-then we just need to go into ``` text OpenCI-Tests ``` folder and type these commands,
+then we just need to go into ``` OpenCI-Tests ``` folder and type these commands,
 
+``` bat
 javac -cp .;../OpenCI.jar TestComplex.java
 java -cp .;../OpenCI.jar TestComplex
+``` 
 
 Congrats, you did it.
