@@ -6,6 +6,7 @@ Open Source Computer Intelligence Library
 - Add appropriate readme file here
 - Add JavaDoc to source files
 - Provide good and clean API 
+- Create Utilities folder and add build tools in it
 - ...
 
 ## Note 1:
