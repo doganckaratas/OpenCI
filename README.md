@@ -4,7 +4,7 @@ Open Source Computer Intelligence Library
 ###### *Maintaining by Doğan Can Karataş, 2017*
 
 
-## TODO for myself
+## TODO
 - Add appropriate readme file here
 - Add JavaDoc to source files
 - Provide good and clean API 
