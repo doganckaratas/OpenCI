@@ -1,7 +1,7 @@
 # OpenCI
 Open Source Computer Intelligence Library
 
-###### *Maintaining by Dogan Can Karatas, 2017*
+###### *Maintaining by Doğan Can Karataş, 2017*
 
 
 ## TODO for myself
@@ -12,7 +12,7 @@ Open Source Computer Intelligence Library
 - ...
 
 ## Making standalone jar file
-Run ``` txt build-win-jar.cmd ``` for windows or ``` txt build-linux-jar.sh ``` for linux (after setting appropriate permissions)
+Run ``` text build-win-jar.cmd ``` for windows or ``` text build-linux-jar.sh ``` for linux (after setting appropriate permissions)
 
 
 ## Using the newly created jar file
