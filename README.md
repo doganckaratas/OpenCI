@@ -1,7 +1,7 @@
 # OpenCI
 Open Source Computer Intelligence Library
 
-####### *Maintaining by Dogan Can Karatas, 2017*
+###### *Maintaining by Dogan Can Karatas, 2017*
 
 
 ## TODO for myself
