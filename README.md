@@ -16,10 +16,10 @@ Run ``` build-win-jar.cmd ``` for windows or ``` build-linux-jar.sh ``` for linu
 
 
 ## Using the newly created jar file
-- For using this jar file with your source to be compiled, type "javac -cp .;{path-to-jar}.jar Test.java"
-- For running, type "java -cp .;{path-to-jar}.jar Test"
+- For compiling, type ``` javac -cp .;{path-to-jar}.jar Test.java ``` in console
+- For running, type ``` java -cp .;{path-to-jar}.jar Test ``` in console
 
-Here are the sample program, "TestComplex.java";
+Here are the sample program, ``` TestComplex.java ``` ;
 
 ``` java
 import OpenCI.Numerical.*;
