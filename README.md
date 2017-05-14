@@ -12,7 +12,7 @@ Open Source Computer Intelligence Library
 - ...
 
 ## Making standalone jar file
-Run ``` text build-win-jar.cmd ``` for windows or ``` text build-linux-jar.sh ``` for linux (after setting appropriate permissions)
+Run ``` build-win-jar.cmd ``` for windows or ``` build-linux-jar.sh ``` for linux (after setting appropriate permissions)
 
 
 ## Using the newly created jar file
