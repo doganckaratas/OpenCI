@@ -13,6 +13,7 @@ Open Source Computer Intelligence Library
 
 ## Making standalone jar file
 Run ``` build-win-jar.cmd ``` for windows or ``` build-linux-jar.sh ``` for linux (after setting appropriate permissions).
+
 The ``` OpenCI.jar ``` file will be appeared in the same folder after this operation.
 
 
