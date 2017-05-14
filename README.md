@@ -99,4 +99,20 @@ javac -cp .;../OpenCI.jar TestComplex.java
 java -cp .;../OpenCI.jar TestComplex
 ``` 
 
+or if you put your source file within your jar directory, like this;
+
+``` text
+
+|_ OpenCI.jar
+|_ TestComplex.java
+| ...
+``` 
+
+you don't need to specify classpath explicitly.
+
+``` bat
+javac TestComplex.java
+java TestComplex
+``` 
+
 Congrats, you did it.
