@@ -9,7 +9,7 @@ package OpenCI.Audio;
  
 public class AudioManager { 
 	
-	public AudioManage() {
+	public AudioManager() {
 		;
 	}
 }
