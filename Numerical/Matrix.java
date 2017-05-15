@@ -19,28 +19,28 @@ public class Matrix {
     private double[][] data2d;
     private double[][] data3d;
     private double[][] data4d;
-	private float[][] data1f;
-	private float[][] data2f;
-	private float[][] data3f;
-	private float[][] data4f;
-	private long[][] data1l;
-	private long[][] data2l;
-	private long[][] data3l;
-	private long[][] data4l;
-	private short[][] data1s;
-	private short[][] data2s;
-	private short[][] data3s;
-	private short[][] data4s;
-	private int[][] data1i;
-	private int[][] data2i;
-	private int[][] data3i;
-	private int[][] data4i;
-	private byte[][] data1b;
-	private byte[][] data2b;
-	private byte[][] data3b;
-	private byte[][] data4b;
-	
-	
+    private float[][] data1f;
+    private float[][] data2f;
+    private float[][] data3f;
+    private float[][] data4f;
+    private long[][] data1l;
+    private long[][] data2l;
+    private long[][] data3l;
+    private long[][] data4l;
+    private short[][] data1s;
+    private short[][] data2s;
+    private short[][] data3s;
+    private short[][] data4s;
+    private int[][] data1i;
+    private int[][] data2i;
+    private int[][] data3i;
+    private int[][] data4i;
+    private byte[][] data1b;
+    private byte[][] data2b;
+    private byte[][] data3b;
+    private byte[][] data4b;
+    
+    
     /**
      * private int m2,n2;
      * double[][] data2d; // n = 2 (2D) double matrix
@@ -122,7 +122,7 @@ public class Matrix {
             case D1:
                 mat.setRow(this.getRow());
                 mat.setCol(this.getCol());
-				mat.setType(this.getType());
+                mat.setType(this.getType());
                 mat.data1d = this.data1d;
                 break;
         }
