@@ -56,7 +56,7 @@ public class Matrix {
 	}
 
     public Matrix(int rows, int cols,Type t) {
-        switch(t){
+		switch(t){
 			case D1: // 1 channel double matrix
 				this.m = rows;
 				this.n = cols;
