@@ -11,8 +11,17 @@
 // bundan 2 tane daha yaratıp hepsini aynı anda döndürürsen 3D matris olur
 
 package OpenCI.Numerical;
-
+   
 public class Matrix {
+    public enum Type{
+        /*
+        B1, B2, B3, B4,     // 8 bit (byte)
+        S1, S2, S3, S4,     // 16 bit (short)
+        I1, I2, I3, I4,     // 32 bit (int)
+        F1, F2, F3, F4,     // 32 bit (float)
+        L1, L2, L3, L4,     // 64 bit (long int) **/
+        D1, D2, D3, D4      // 64 bit (double/long float)
+    };
     private int m;
     private int n;
     private double[][] data1d; // n = 1 (1D) double matrix
@@ -39,34 +48,6 @@ public class Matrix {
     private byte[][] data2b;
     private byte[][] data3b;
     private byte[][] data4b;
-    
-    
-    /**
-     * private int m2,n2;
-     * double[][] data2d; // n = 2 (2D) double matrix
-     * ...
-     *
-     * private int m3,n3;
-     * double[][] data3d; // n = 3 (3D) double matrix
-     * float[][] data3f;  // n = 3 (3D) float matrix
-     * ...
-     *
-     * private int m4,n4;
-     * double[][] data4d; // n = 4 (4D) double matrix
-     * float[][] data4f;  // n = 4 (4D) float matrix
-     * int[][] data4i;    // n = 4 (4D) int matrix
-     * ...
-     */
-
-    public enum Type{
-        /*
-        B1, B2, B3, B4,     // 8 bit (byte)
-        S1, S2, S3, S4,     // 16 bit (short)
-        I1, I2, I3, I4,     // 32 bit (int)
-        F1, F2, F3, F4,     // 32 bit (float)
-        L1, L2, L3, L4,     // 64 bit (long int) **/
-        D1, D2, D3, D4      // 64 bit (double/long float)
-    };
     
     private Type type;
 
