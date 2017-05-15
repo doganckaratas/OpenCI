@@ -10,7 +10,7 @@ package OpenCI.Numerical;
 public class Complex {
     private double real;
     private double imag;
-	private String unit = "degree"; // "degree", "radian"
+    private String unit = "degree"; // "degree", "radian"
 
     public Complex() {
         this.real = 0.0D;
@@ -26,11 +26,11 @@ public class Complex {
         this.real = c.getReal();
         this.imag = c.getImag();
     }
-	
-	public void set(double i, double j) {
-		this.real = i;
-		this.imag = j;
-	}
+    
+    public void set(double i, double j) {
+        this.real = i;
+        this.imag = j;
+    }
 
     public Complex get() {
         return new Complex(this.real, this.imag);
@@ -68,22 +68,22 @@ public class Complex {
         }
     }
 
-	public Polar toPolar() {
-		try{
-			switch(this.unit) {
-				case "degree":
-					return new Polar( Math.sqrt(Math.pow(this.real,2) + Math.pow(this.imag,2)),Math.toDegrees(Math.atan(this.imag / this.real)) );
-				case "radian":
-					return new Polar( Math.sqrt(Math.pow(this.real,2) + Math.pow(this.imag,2)),Math.atan(this.imag / this.real) );
-				default:
-					return new Polar(0,0);
-			}
-		} catch (ArithmeticException ae) {
-					return new Polar(0,0);
-		}
-	}
+    public Polar toPolar() {
+        try{
+            switch(this.unit) {
+                case "degree":
+                    return new Polar( Math.sqrt(Math.pow(this.real,2) + Math.pow(this.imag,2)),Math.toDegrees(Math.atan(this.imag / this.real)) );
+                case "radian":
+                    return new Polar( Math.sqrt(Math.pow(this.real,2) + Math.pow(this.imag,2)),Math.atan(this.imag / this.real) );
+                default:
+                    return new Polar(0,0);
+            }
+        } catch (ArithmeticException ae) {
+                    return new Polar(0,0);
+        }
+    }
 
-	public String toString() {
+    public String toString() {
         if(this.imag < 0) {
             return String.valueOf(this.real + "-" + (-this.imag) + "i");
         } else {
