@@ -13,10 +13,13 @@
 package OpenCI.Numerical;
 
 public class Matrix {
-    private int m1;
-    private int n1;
+    private int m;
+    private int n;
     double[][] data1d; // n = 1 (1D) double matrix
-
+	double[][] data2d;
+	double[][] data3d;
+	double[][] data4d;
+	
     /**
      * private int m2,n2;
      * double[][] data2d; // n = 2 (2D) double matrix
@@ -43,21 +46,107 @@ public class Matrix {
         L1, L2, L3, L4,     // 64 bit (long int) **/
         D1, D2, D3, D4      // 64 bit (double/long float)
     };
+	
+	private Type type;
 
-    //public Matrix();
+    public Matrix() { // defaults
+		this.m = 0;
+		this.n = 0;
+		this.type = Type.D1;
+	}
 
     public Matrix(int rows, int cols,Type t) {
-        if(t == Type.D1){
-            this.m1 = rows;
-            this.n1 = cols;
-            this.data1d = new double[m1][n1];
+        switch(t){
+			case D1: // 1 channel double matrix
+				this.m = rows;
+				this.n = cols;
+				this.type = Type.D1;
+				this.data1d = new double[m][n];
+				break;
+			case D2: // 2 channel double matrix
+				this.m = rows;
+				this.n = cols;
+				this.type = Type.D2;				
+				this.data1d = new double[m][n];
+				this.data2d = new double[m][n];
+				break;
+			case D3: // 3 channel double matrix
+				this.m = rows;
+				this.n = cols;
+				this.type = Type.D3;
+				this.data1d = new double[m][n];
+				this.data2d = new double[m][n];
+				this.data3d = new double[m][n];
+				break;
+			case D4: // 4 channel double matrix
+				this.m = rows;
+				this.n = cols;
+				this.type = Type.D4;
+				this.data1d = new double[m][n];
+				this.data2d = new double[m][n];
+				this.data3d = new double[m][n];
+				this.data4d = new double[m][n];
+				break;
+			default:
+				break;
         }
     }
+	
+	// fix these 
+	public void setCell(int row, int col, double data) {
+		// 1D, Double 
+		this.data1d[row][col] = data;
+	}
+	
+	public void cloneTo(Matrix mat) {
+		switch(this.type) {
+			case D1:
+				mat.setRow(this.m);
+				mat.setCol(this.n);
+				mat.data1d = this.data1d;
+				break;
+		}
+	}
 
-    public void setData(int row,int col,double data) {
-        this.data1d[row][col] = data;
+	public int getRow() {
+		return this.m;
+	}
+	
+	public int getCol() {
+		return this.n;
+	}
+	
+	public void setRow(int row) {
+		this.m = row;
+	}
+	
+	public void setCol(int col) {
+		this.n = col;
+	}
+	
+	public void setType(Type t) {
+		this.type = t;
+	}
+	
+	public Type getType() {
+		return this.type;
+	}
+	
+    public void setCell(int row,int col,int dimension,double data) { 
+		// nD, Double
+		switch(dimension) { 
+			case 2:
+				this.data2d[row][col] = data;
+				break;
+			case 3: 
+				this.data3d[row][col] = data;
+				break;
+			case 4: 
+				this.data4d[row][col] = data;
+				break;
+		}
     }
-    public double getData(int row,int col) {
+    public double getCell(int row,int col) {
         return data1d[row][col];
     }
 
