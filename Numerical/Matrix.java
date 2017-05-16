@@ -10,6 +10,11 @@
 //   [ m20, m21, m22] ] formatında olmalı, bu 1D matrix oluyor.
 // bundan 2 tane daha yaratıp hepsini aynı anda döndürürsen 3D matris olur
 
+// yada matrix array da yapılabilir,,, Matrix[] m = new Matrix[4]; // 4D matrix...
+// m[1].setType(Matrix.Type.D);
+// m -> Object [Array] of Type Matrix
+// m[2] = Matrix.zeros(3,3);
+
 package OpenCI.Numerical;
    
 public class Matrix {
@@ -48,7 +53,6 @@ public class Matrix {
     private byte[][] data2b;
     private byte[][] data3b;
     private byte[][] data4b;
-    
     private Type type;
 
     public Matrix() { // defaults to null
@@ -91,6 +95,16 @@ public class Matrix {
                 break;
         }
     }
+	
+	public static Matrix zeros(int size,Type t) { // Mat m = Matrix.zeros(3,Matrix.Type.D1);
+		Matrix m = new Matrix(size,size,t);
+		for(int i = 0; i < size; i++) {
+			for(int j = 0; j < size; j++) {
+				m[j][i] = 0;
+			}
+		}
+		return m;
+	}
     
     // fix these 
     public void setCell(int row, int col, double data) {
