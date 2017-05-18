@@ -15,6 +15,11 @@
 // m -> Object [Array] of Type Matrix
 // m[2] = Matrix.zeros(3,3);
 
+// Matrix[] m = new Matrix[3];
+// Capture cap = new Capture(0);
+// cap.getFrame(m); 
+// mesela?
+
 package OpenCI.Numerical;
    
 public class Matrix {
@@ -25,100 +30,92 @@ public class Matrix {
         I1, I2, I3, I4,     // 32 bit (int)
         F1, F2, F3, F4,     // 32 bit (float)
         L1, L2, L3, L4,     // 64 bit (long int) **/
-        D1, D2, D3, D4      // 64 bit (double/long float)
+        Double      // 64 bit (double/long float)
     };
     private int m;
     private int n;
-    private double[][] data1d; // n = 1 (1D) double matrix
-    private double[][] data2d;
-    private double[][] data3d;
-    private double[][] data4d;
-    private float[][] data1f;
-    private float[][] data2f;
-    private float[][] data3f;
-    private float[][] data4f;
-    private long[][] data1l;
-    private long[][] data2l;
-    private long[][] data3l;
-    private long[][] data4l;
-    private short[][] data1s;
-    private short[][] data2s;
-    private short[][] data3s;
-    private short[][] data4s;
-    private int[][] data1i;
-    private int[][] data2i;
-    private int[][] data3i;
-    private int[][] data4i;
-    private byte[][] data1b;
-    private byte[][] data2b;
-    private byte[][] data3b;
-    private byte[][] data4b;
+    private double[][] data_d; // n = 1 (1D) double matrix
+    private float[][] data_f;
+    private long[][] data_l;
+    private short[][] data_s;
+    private int[][] data_i;
+    private byte[][] data_b;
     private Type type;
 
     public Matrix() { // defaults to null
 
     }
-
+    
     public Matrix(int rows, int cols,Type t) {
         switch(t){
-            case D1: // 1 channel double matrix
+            case Double: // 1 channel double matrix
                 this.m = rows;
                 this.n = cols;
-                this.type = Type.D1;
-                this.data1d = new double[m][n];
-                break;
-            case D2: // 2 channel double matrix
-                this.m = rows;
-                this.n = cols;
-                this.type = Type.D2;                
-                this.data1d = new double[m][n];
-                this.data2d = new double[m][n];
-                break;
-            case D3: // 3 channel double matrix
-                this.m = rows;
-                this.n = cols;
-                this.type = Type.D3;
-                this.data1d = new double[m][n];
-                this.data2d = new double[m][n];
-                this.data3d = new double[m][n];
-                break;
-            case D4: // 4 channel double matrix
-                this.m = rows;
-                this.n = cols;
-                this.type = Type.D4;
-                this.data1d = new double[m][n];
-                this.data2d = new double[m][n];
-                this.data3d = new double[m][n];
-                this.data4d = new double[m][n];
+                this.type = Type.Double;
+                this.data_d = new double[m][n];
                 break;
             default:
                 break;
         }
     }
-	
-	public static Matrix zeros(int size,Type t) { // Mat m = Matrix.zeros(3,Matrix.Type.D1);
-		Matrix m = new Matrix(size,size,t);
-		for(int i = 0; i < size; i++) {
-			for(int j = 0; j < size; j++) {
-				m[j][i] = 0;
-			}
-		}
-		return m;
-	}
+    
+    public static Matrix zeros(int rows, int cols,Type t) { // Mat m = Matrix.zeros(3,3,Matrix.Type.Double);
+        Matrix m = new Matrix(rows,cols,t);
+        for(int i = 0; i < rows; i++) {
+            for(int j = 0; j < cols; j++) {
+                m.setCell(i,j,0);
+            }
+        }
+        return m;
+    }
     
     // fix these 
-    public void setCell(int row, int col, double data) {
-        // 1D, Double 
-        this.data1d[row][col] = data;
-    }
     
     public void cloneTo(Matrix mat) {
         switch(this.type) {
-            case D1:
+            case Double:
                 mat.setRow(this.getRow());
                 mat.setCol(this.getCol());
                 mat.setType(this.getType());
-                mat.data1d = this.data1d;
+                mat.data_d = this.data_d;
+                break;
+        }
+    }
+    
+    public void print() {
+        switch(this.type){
+            case Double:
+                System.out.print("[");
+                for(int i = 0; i < this.m; i++) {
+                    if(i == 0) System.out.print("["); else System.out.print(" [");
+                    for(int j = 0; j < this.n; j++) {
+                        System.out.printf(" %7.3f",this.data_d[i][j]);
+                        if (j == (this.n - 1) && i != (this.m - 1)) 
+                            System.out.println(" ]"); 
+                        else if(j == (this.n - 1) && i == (this.m - 1)) 
+                            System.out.println(" ]]");
+                        else continue;
+                    }
+                }
+                break;
+        }
+    }
+    
+        public void println() {
+        switch(this.type){
+            case Double:
+                System.out.print("[");
+                for(int i = 0; i < this.m; i++) {
+                    if(i == 0) System.out.print("["); else System.out.print(" [");
+                    for(int j = 0; j < this.n; j++) {
+                        System.out.printf(" %7.3f",this.data_d[i][j]);
+                        if (j == (this.n - 1) && i != (this.m - 1)) 
+                            System.out.println(" ]"); 
+                        else if(j == (this.n - 1) && i == (this.m - 1)) 
+                            System.out.println(" ]]\n");
+                        else continue;
+                    }
+                }
                 break;
         }
     }
@@ -147,22 +144,22 @@ public class Matrix {
         return this.type;
     }
     
-    public void setCell(int row,int col,int dimension,double data) { 
+    public void setCell(int row, int col, double data) { 
         // nD, Double
-        switch(dimension) { 
-            case 2:
-                this.data2d[row][col] = data;
-                break;
-            case 3: 
-                this.data3d[row][col] = data;
-                break;
-            case 4: 
-                this.data4d[row][col] = data;
+        switch(this.type) { 
+            case Double:
+                this.data_d[row][col] = data;
                 break;
         }
     }
+    
     public double getCell(int row,int col) {
-        return data1d[row][col];
+        switch(this.type) {
+            case Double:
+                return this.data_d[row][col];
+            default:
+                return 0;
+        }
     }
 
     // zeros, ones, clone, transpose, inverse, getrow, getcol, dotproduct, crossproduct  ...
