@@ -26,7 +26,7 @@ public class Matrix {
     public enum Type{
         Byte,       // 8 bit (byte)
         Short,      // 16 bit (short)
-        Int,    // 32 bit (int)
+        Int,        // 32 bit (int)
         Float,      // 32 bit (float)
         Long,       // 64 bit (long int)
         Double      // 64 bit (double/long float)
