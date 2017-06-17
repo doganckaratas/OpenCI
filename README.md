@@ -3,7 +3,7 @@ Open Source Computer Intelligence Library
 
 Version: 0.1 Alpha
 
-###### *Maintaining by Doğan Can Karataş, 2017*
+###### *Maintaining by Doğan Can Karataş, May 2017*
 
 
 ## TODO
