@@ -17,11 +17,11 @@
 
 // Matrix[] m = new Matrix[3];
 // Capture cap = new Capture(0);
-// cap.getFrame(m); 
+// cap.getFrame(m);
 // mesela?
 
-package OpenCI.Numerical;
-   
+package openci.numerical;
+
 public class Matrix {
     public enum Type{
         Byte,       // 8 bit (byte)
@@ -44,7 +44,7 @@ public class Matrix {
     public Matrix() { // defaults to null
 
     }
-    
+
     public Matrix(int rows, int cols, Type t) {
         this.m = rows;
         this.n = cols;
@@ -72,7 +72,7 @@ public class Matrix {
                 break;
         }
     }
-    
+
     public static Matrix zeros(int rows, int cols,Type t) { // Mat m = Matrix.zeros(3,3,Matrix.Type.Double);
         Matrix m = new Matrix(rows,cols,t);
         for(int i = 0; i < rows; i++) {
@@ -82,9 +82,9 @@ public class Matrix {
         }
         return m;
     }
-    
-    // fix these 
-    
+
+    // fix these
+
     public void cloneTo(Matrix mat) {
         mat.setRow(this.getRow());
         mat.setCol(this.getCol());
@@ -112,7 +112,7 @@ public class Matrix {
                 break;
         }
     }
-    
+
     public void print() {
         switch(this.type){
             case Double:
@@ -121,9 +121,9 @@ public class Matrix {
                     if(i == 0) System.out.print("["); else System.out.print(" [");
                     for(int j = 0; j < this.n; j++) {
                         System.out.printf(" %7.3f",this.data_d[i][j]);
-                        if (j == (this.n - 1) && i != (this.m - 1)) 
-                            System.out.println(" ]"); 
-                        else if(j == (this.n - 1) && i == (this.m - 1)) 
+                        if (j == (this.n - 1) && i != (this.m - 1))
+                            System.out.println(" ]");
+                        else if(j == (this.n - 1) && i == (this.m - 1))
                             System.out.println(" ]]");
                         else continue;
                     }
@@ -135,9 +135,9 @@ public class Matrix {
                     if(i == 0) System.out.print("["); else System.out.print(" [");
                     for(int j = 0; j < this.n; j++) {
                         System.out.printf(" %7.3f",this.data_f[i][j]);
-                        if (j == (this.n - 1) && i != (this.m - 1)) 
-                            System.out.println(" ]"); 
-                        else if(j == (this.n - 1) && i == (this.m - 1)) 
+                        if (j == (this.n - 1) && i != (this.m - 1))
+                            System.out.println(" ]");
+                        else if(j == (this.n - 1) && i == (this.m - 1))
                             System.out.println(" ]]");
                         else continue;
                     }
@@ -149,9 +149,9 @@ public class Matrix {
                     if(i == 0) System.out.print("["); else System.out.print(" [");
                     for(int j = 0; j < this.n; j++) {
                         System.out.printf(" %7d",this.data_l[i][j]);
-                        if (j == (this.n - 1) && i != (this.m - 1)) 
-                            System.out.println(" ]"); 
-                        else if(j == (this.n - 1) && i == (this.m - 1)) 
+                        if (j == (this.n - 1) && i != (this.m - 1))
+                            System.out.println(" ]");
+                        else if(j == (this.n - 1) && i == (this.m - 1))
                             System.out.println(" ]]");
                         else continue;
                     }
@@ -163,9 +163,9 @@ public class Matrix {
                     if(i == 0) System.out.print("["); else System.out.print(" [");
                     for(int j = 0; j < this.n; j++) {
                         System.out.printf(" %7d",this.data_i[i][j]);
-                        if (j == (this.n - 1) && i != (this.m - 1)) 
-                            System.out.println(" ]"); 
-                        else if(j == (this.n - 1) && i == (this.m - 1)) 
+                        if (j == (this.n - 1) && i != (this.m - 1))
+                            System.out.println(" ]");
+                        else if(j == (this.n - 1) && i == (this.m - 1))
                             System.out.println(" ]]");
                         else continue;
                     }
@@ -177,9 +177,9 @@ public class Matrix {
                     if(i == 0) System.out.print("["); else System.out.print(" [");
                     for(int j = 0; j < this.n; j++) {
                         System.out.printf(" %7d",this.data_s[i][j]);
-                        if (j == (this.n - 1) && i != (this.m - 1)) 
-                            System.out.println(" ]"); 
-                        else if(j == (this.n - 1) && i == (this.m - 1)) 
+                        if (j == (this.n - 1) && i != (this.m - 1))
+                            System.out.println(" ]");
+                        else if(j == (this.n - 1) && i == (this.m - 1))
                             System.out.println(" ]]");
                         else continue;
                     }
@@ -191,19 +191,19 @@ public class Matrix {
                     if(i == 0) System.out.print("["); else System.out.print(" [");
                     for(int j = 0; j < this.n; j++) {
                         System.out.printf(" %7d",this.data_b[i][j]);
-                        if (j == (this.n - 1) && i != (this.m - 1)) 
-                            System.out.println(" ]"); 
-                        else if(j == (this.n - 1) && i == (this.m - 1)) 
+                        if (j == (this.n - 1) && i != (this.m - 1))
+                            System.out.println(" ]");
+                        else if(j == (this.n - 1) && i == (this.m - 1))
                             System.out.println(" ]]");
                         else continue;
                     }
                 }
                 break;
-            default: 
+            default:
                 break;
         }
     }
-    
+
     public void println() {
         switch(this.type){
             case Double:
@@ -212,9 +212,9 @@ public class Matrix {
                     if(i == 0) System.out.print("["); else System.out.print(" [");
                     for(int j = 0; j < this.n; j++) {
                         System.out.printf(" %7.3f",this.data_d[i][j]);
-                        if (j == (this.n - 1) && i != (this.m - 1)) 
-                            System.out.println(" ]"); 
-                        else if(j == (this.n - 1) && i == (this.m - 1)) 
+                        if (j == (this.n - 1) && i != (this.m - 1))
+                            System.out.println(" ]");
+                        else if(j == (this.n - 1) && i == (this.m - 1))
                             System.out.println(" ]]\n");
                         else continue;
                     }
@@ -226,9 +226,9 @@ public class Matrix {
                     if(i == 0) System.out.print("["); else System.out.print(" [");
                     for(int j = 0; j < this.n; j++) {
                         System.out.printf(" %7.3f",this.data_f[i][j]);
-                        if (j == (this.n - 1) && i != (this.m - 1)) 
-                            System.out.println(" ]"); 
-                        else if(j == (this.n - 1) && i == (this.m - 1)) 
+                        if (j == (this.n - 1) && i != (this.m - 1))
+                            System.out.println(" ]");
+                        else if(j == (this.n - 1) && i == (this.m - 1))
                             System.out.println(" ]]\n");
                         else continue;
                     }
@@ -240,9 +240,9 @@ public class Matrix {
                     if(i == 0) System.out.print("["); else System.out.print(" [");
                     for(int j = 0; j < this.n; j++) {
                         System.out.printf(" %7d",this.data_l[i][j]);
-                        if (j == (this.n - 1) && i != (this.m - 1)) 
-                            System.out.println(" ]"); 
-                        else if(j == (this.n - 1) && i == (this.m - 1)) 
+                        if (j == (this.n - 1) && i != (this.m - 1))
+                            System.out.println(" ]");
+                        else if(j == (this.n - 1) && i == (this.m - 1))
                             System.out.println(" ]]\n");
                         else continue;
                     }
@@ -254,9 +254,9 @@ public class Matrix {
                     if(i == 0) System.out.print("["); else System.out.print(" [");
                     for(int j = 0; j < this.n; j++) {
                         System.out.printf(" %7d",this.data_i[i][j]);
-                        if (j == (this.n - 1) && i != (this.m - 1)) 
-                            System.out.println(" ]"); 
-                        else if(j == (this.n - 1) && i == (this.m - 1)) 
+                        if (j == (this.n - 1) && i != (this.m - 1))
+                            System.out.println(" ]");
+                        else if(j == (this.n - 1) && i == (this.m - 1))
                             System.out.println(" ]]\n");
                         else continue;
                     }
@@ -268,9 +268,9 @@ public class Matrix {
                     if(i == 0) System.out.print("["); else System.out.print(" [");
                     for(int j = 0; j < this.n; j++) {
                         System.out.printf(" %7d",this.data_s[i][j]);
-                        if (j == (this.n - 1) && i != (this.m - 1)) 
-                            System.out.println(" ]"); 
-                        else if(j == (this.n - 1) && i == (this.m - 1)) 
+                        if (j == (this.n - 1) && i != (this.m - 1))
+                            System.out.println(" ]");
+                        else if(j == (this.n - 1) && i == (this.m - 1))
                             System.out.println(" ]]\n");
                         else continue;
                     }
@@ -282,15 +282,15 @@ public class Matrix {
                     if(i == 0) System.out.print("["); else System.out.print(" [");
                     for(int j = 0; j < this.n; j++) {
                         System.out.printf(" %7d",this.data_b[i][j]);
-                        if (j == (this.n - 1) && i != (this.m - 1)) 
-                            System.out.println(" ]"); 
-                        else if(j == (this.n - 1) && i == (this.m - 1)) 
+                        if (j == (this.n - 1) && i != (this.m - 1))
+                            System.out.println(" ]");
+                        else if(j == (this.n - 1) && i == (this.m - 1))
                             System.out.println(" ]]\n");
                         else continue;
                     }
                 }
                 break;
-            default: 
+            default:
                 break;
         }
     }
@@ -298,51 +298,51 @@ public class Matrix {
     public int getRow() {
         return this.m;
     }
-    
+
     public int getCol() {
         return this.n;
     }
-    
+
     public void setRow(int row) {
         this.m = row;
     }
-    
+
     public void setCol(int col) {
         this.n = col;
     }
-    
+
     public void setType(Type t) {
         this.type = t;
     }
-    
+
     public Type getType() {
         return this.type;
     }
-    
-    public void setCell(int row, int col, double data) { 
+
+    public void setCell(int row, int col, double data) {
         this.data_d[row][col] = data;
     }
-    
-    public void setCell(int row, int col, float data) { 
+
+    public void setCell(int row, int col, float data) {
         this.data_f[row][col] = data;
     }
-    
-    public void setCell(int row, int col, long data) { 
+
+    public void setCell(int row, int col, long data) {
         this.data_l[row][col] = data;
     }
-    
-    public void setCell(int row, int col, int data) { 
+
+    public void setCell(int row, int col, int data) {
         this.data_i[row][col] = data;
     }
-    
-    public void setCell(int row, int col, short data) { 
+
+    public void setCell(int row, int col, short data) {
         this.data_s[row][col] = data;
     }
 
-    public void setCell(int row, int col, byte data) { 
+    public void setCell(int row, int col, byte data) {
         this.data_b[row][col] = data;
     }
-    
+
     public double getCell(int row,int col) {
         switch(this.type) {
             case Double:

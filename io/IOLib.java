@@ -5,10 +5,10 @@
  * @version 1.0
  */
 
-package OpenCI.IO;
- 
-public class IOLib { 
-	
+package openci.io;
+
+public class IOLib {
+
 	public IOLib() {
 		;
 	}

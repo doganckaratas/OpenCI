@@ -5,10 +5,10 @@
  * @version 1.0
  */
 
-package OpenCI.Neural;
- 
-public class NeuralNetwork { 
-	
+package openci.neural;
+
+public class NeuralNetwork {
+
 	public NeuralNetwork() {
 		;
 	}

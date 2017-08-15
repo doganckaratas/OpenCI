@@ -5,7 +5,7 @@
  * @version 1.0
  */
 
-package OpenCI.Numerical;
+package openci.numerical;
 
 public class Complex {
     private double real;
@@ -26,7 +26,7 @@ public class Complex {
         this.real = c.getReal();
         this.imag = c.getImag();
     }
-    
+
     public void set(double i, double j) {
         this.real = i;
         this.imag = j;

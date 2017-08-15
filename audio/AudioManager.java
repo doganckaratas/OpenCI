@@ -5,10 +5,10 @@
  * @version 1.0
  */
 
-package OpenCI.Audio;
- 
-public class AudioManager { 
-	
+package openci.audio;
+
+public class AudioManager {
+
 	public AudioManager() {
 		;
 	}

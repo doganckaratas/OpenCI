@@ -4,11 +4,11 @@
  * @author dogan can karatas
  * @version 1.0
  */
- 
-package OpenCI.Vision;
- 
-public class ComputerVision { 
-	
+
+package openci.vision;
+
+public class ComputerVision {
+
 	public ComputerVision() {
 		;
 	}

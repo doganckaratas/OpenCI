@@ -6,7 +6,7 @@ find -name "*.java" > src.txt
 javac -d ./output @src.txt
 rm src.txt
 cd output/
-jar -cf OpenCI.jar OpenCI/
+jar -cf OpenCI.jar openci/
 mv OpenCI.jar ../OpenCI.jar
 cd ..
 rm -rf output

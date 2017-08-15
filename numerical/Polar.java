@@ -5,7 +5,7 @@
  * @version 1.0
  */
 
-package OpenCI.Numerical;
+package openci.numerical;
 
 public class Polar {
     private double radius;
